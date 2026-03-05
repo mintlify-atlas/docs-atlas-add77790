@@ -1,0 +1,181 @@
+{
+  "projectType": "saas",
+  "projectName": "SyftHub",
+  "projectDescription": "A registry and discovery platform for AI/ML endpoints with identity provider capabilities - think GitHub for AI endpoints",
+  "theme": "palm",
+  "primaryColor": "#b96a7e",
+  "lightColor": "#d1ab82",
+  "darkColor": "#79a0a3",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/endpoints",
+              "concepts/organizations",
+              "concepts/identity-provider",
+              "concepts/visibility-and-access"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/creating-endpoints",
+              "guides/managing-organizations",
+              "guides/authentication",
+              "guides/using-satellite-tokens",
+              "guides/starring-endpoints"
+            ]
+          },
+          {
+            "group": "SDKs",
+            "pages": [
+              "sdks/overview",
+              "sdks/python",
+              "sdks/typescript"
+            ]
+          },
+          {
+            "group": "CLI",
+            "pages": [
+              "cli/overview",
+              "cli/installation",
+              "cli/commands"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/components",
+              "architecture/rag-aggregator",
+              "architecture/authentication-flow"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/production",
+              "deployment/environment-variables"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "development/local-setup",
+              "development/testing",
+              "development/contributing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/register",
+              "api/auth/login",
+              "api/auth/refresh",
+              "api/auth/me",
+              "api/auth/logout"
+            ]
+          },
+          {
+            "group": "Users",
+            "pages": [
+              "api/users/get-user",
+              "api/users/update-profile"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/endpoints/create",
+              "api/endpoints/list",
+              "api/endpoints/get",
+              "api/endpoints/update",
+              "api/endpoints/delete",
+              "api/endpoints/browse",
+              "api/endpoints/trending",
+              "api/endpoints/star",
+              "api/endpoints/unstar"
+            ]
+          },
+          {
+            "group": "Organizations",
+            "pages": [
+              "api/organizations/create",
+              "api/organizations/list",
+              "api/organizations/get",
+              "api/organizations/update",
+              "api/organizations/delete",
+              "api/organizations/add-member",
+              "api/organizations/remove-member"
+            ]
+          },
+          {
+            "group": "Identity Provider",
+            "pages": [
+              "api/idp/get-satellite-token",
+              "api/idp/jwks",
+              "api/idp/verify-token"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Endpoint discovery and management for AI/ML models and data sources",
+    "Organization collaboration with role-based access control",
+    "Federated identity provider with RS256 satellite tokens",
+    "Public browse and trending discovery with star ratings",
+    "Official Python and TypeScript SDKs",
+    "Go-based CLI for command-line operations",
+    "RAG aggregator service for federated context and inference",
+    "GitHub-style endpoint URLs (/{owner}/{slug})"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/auth/register",
+    "POST /api/v1/auth/login",
+    "POST /api/v1/auth/refresh",
+    "GET /api/v1/auth/me",
+    "POST /api/v1/auth/logout",
+    "GET /api/v1/users/me",
+    "PUT /api/v1/users/me",
+    "POST /api/v1/endpoints",
+    "GET /api/v1/endpoints",
+    "GET /api/v1/endpoints/public",
+    "GET /api/v1/endpoints/trending",
+    "POST /api/v1/endpoints/{id}/star",
+    "DELETE /api/v1/endpoints/{id}/star",
+    "POST /api/v1/organizations",
+    "GET /api/v1/organizations",
+    "POST /api/v1/organizations/{id}/members",
+    "GET /api/v1/token?aud={service}",
+    "GET /.well-known/jwks.json",
+    "POST /api/v1/verify",
+    "GET /{owner}/{slug}",
+    "syft login",
+    "syft ls",
+    "syft query",
+    "syft add",
+    "syft remove",
+    "SyftHubClient (Python SDK)",
+    "SyftHubClient (TypeScript SDK)"
+  ]
+}
